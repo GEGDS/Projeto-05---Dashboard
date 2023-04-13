@@ -9,6 +9,7 @@
 
 }
 
+
 body {
 	margin: 0;
 	padding: 0;
@@ -18,7 +19,7 @@ body {
 .sidebar-container {
 	display: flex;
 	flex-direction: row;
-	height: 100vh;
+	height: 120vh;
 }
 
 .sidebar {
@@ -40,7 +41,8 @@ body {
 }
 
 .sidebar ul img {
-    display: block;
+	display: block;
+	padding-right: 15px;
     height: 20px;
     width: 20px;
 }
@@ -59,11 +61,104 @@ body {
 	text-decoration: underline;
 }
 
+
+
 header {
-    width: 100vw;
-    height: 150px;
-    background-color: var(--color-2);
+	font-size: 1em;
+	background-color: var(--color-2);
+	display: block;
+	width: 100vw;
+	height: 200px;
+	padding: 0 20px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 
-  
+header div.header-top{
+	display: flex;
+	padding: 10px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+header div.header-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 100px;
+}
+
+header div.header-bottom nav ul{
+	gap: 100px;
+}
+
+
+.logo img {
+	height: 30px;
+}
+
+.search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.search-bar input[type="text"] {
+	padding: 8px;
+	border: none;
+	border-bottom: 2px solid #ddd;
+	outline: none;
+	font-size: 16px;
+}
+
+.search-bar button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 8px 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.search-bar button:hover {
+	background-color: #555;
+}
+
+.user-profile {
+	display: flex;
+	align-items: center;
+}
+
+.user-profile img {
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	display: block;
+	padding: 20px;
+	color: #333;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #eee;
+}
+
+.user-info {
+	display: flex;
+	flex-direction: column;
+}
