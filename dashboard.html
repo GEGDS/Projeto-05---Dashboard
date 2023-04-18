@@ -12,18 +12,18 @@
     <div class="sidebar-container">
 		<div class="sidebar">
 			<ul>
-				<li><img src="./icons/view-dashboard.svg" alt=""><a href="#">Dashboard</a></li>
-				<li><img src="./icons/home.svg" alt=""><a href="#">Home</a></li>
-				<li><img src="./icons/card-account-details.svg" alt=""><a href="#">Profile</a></li>
-				<li><img src="./icons/message.svg" alt=""><a href="#">Messages</a></li>
-                <li><img src="./icons/clock-outline.svg" alt=""><a href="#">History</a></li>
-                <li><img src="./icons/note-multiple.svg" alt=""><a href="#">Tasks</a></li>
-                <li><img src="./icons/account-group.svg" alt=""><a href="#">Communities</a></li>
+				<li class="dashboard-logo"><img src="./icons/view-dashboard.svg" alt="">Dashboard</li>
+				<li><img src="./icons/home.svg" alt="icone home"><a href="#">Home</a></li>
+				<li><img src="./icons/card-account-details.svg" alt="icone card account details"><a href="#">Profile</a></li>
+				<li><img src="./icons/message.svg" alt="icone message"><a href="#">Messages</a></li>
+                <li><img src="./icons/clock-outline.svg" alt="icone clock-outline"><a href="#">History</a></li>
+                <li><img src="./icons/note-multiple.svg" alt="icone note multiple"><a href="#">Tasks</a></li>
+                <li><img src="./icons/account-group.svg" alt="icone account-group"><a href="#">Communities</a></li>
                 <br>
 
-                <li><img src="icons/cog.svg" alt=""><a href="#">Settings</a></li>
-                <li><img src="./icons/message-question.svg" alt=""><a href="#">Support</a></li>
-                <li><img src="./icons/shield-check.svg" alt=""><a href="#">Privacy</a></li>
+                <li><img src="icons/cog.svg" alt="icone cog"><a href="#">Settings</a></li>
+                <li><img src="./icons/message-question.svg" alt="icone message question"><a href="#">Support</a></li>
+                <li><img src="./icons/shield-check.svg" alt="icone shield check"><a href="#">Privacy</a></li>
 			</ul>
 		</div>
         
@@ -31,19 +31,23 @@
 
             <div class="header-top">
 
-                <div class="user-profile">
-                    <img src="https://via.placeholder.com/50" alt="Foto de perfil">
-                    <div class="user-info">
-                        <h3>Nome Usuario</h3>
-                    </div>
-                </div>
                 <div class="search-bar">
                     <div class="logo">
                         <img src="icons/magnify.svg" alt="Logo">
                     </div>
                     <input type="text" placeholder="Pesquisar">
                     <button>Pesquisar</button>
+                </div>
+
+                <div class="user-profile">
+                    <picture>
+                        <source media="(max-heigth: 450px)" srcset="https://github.com/gegds.png">
                     
+                        <img src="https://github.com/gegds.png" alt="Foto de perfil"> 
+                    </picture>
+                    <div class="user-info">
+                        <h3>@GEGDS</h3>
+                    </div>
                 </div>
                 
             </div>
@@ -51,13 +55,14 @@
             <div class="header-bottom">
                 <nav>
                     <ul>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Upload</a></li>
+                        <li><a href="#">Share</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
 		
 </body>
 </html>
