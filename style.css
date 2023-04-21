@@ -20,17 +20,18 @@ body {
 	padding: 0;
 }
 
-
+/*barra lateral**********************************************************************************************/
 .sidebar-container {
-	display: flex;
-	flex-direction: row;
+	position: absolute;
 	height: 120vh;
 }
 
 .sidebar {
+	position: absolute;
+	overflow-y: auto;
 	background-color: var(--color-1);
-	color: #fff;
-	height: 100%;
+	color: var(--color-4);
+	height: 300%;
 	width: 10px;
 	transition: width 0.5s;
 }
@@ -59,7 +60,7 @@ body {
 }
 
 .sidebar li a {
-	color: #fff;
+	color: var(--color-4);
 	text-decoration: none;
 }
 
@@ -79,109 +80,150 @@ div.sidebar ul li.dashboard-logo {
 	height: 22px;
 	width: 22px;
 }
+/*Fim barra lateral******************************************************************************************/
 
+/*Começo do Cabeçalho****************************************************************************************/
 header {
-	font-size: 1em;
-	background-color: var(--color-2);
-	display: block;
-	width: 100vw;
-	height: 210px;
-	padding: 0 20px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 1em;
+  background-color: var(--color-2);
+  display: flex;
+  width: 100%;
+  min-height: 150px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column-reverse;
 }
-
-
-header div.header-top{
-	display: flex;
-	padding: 5px;
-	margin: 5px;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	
-}
-
-header div.header-bottom {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	gap: 100px;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-header div.header-bottom nav ul{
-	gap: 100px;
-}
-
-
-
-.logo img {
-	height: 30px;
-}
-
 
 .search-bar {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 20px;
+  width: 100%;
+  max-width: 80vw;
 }
 
 .search-bar input[type="text"] {
-	padding: 8px;
-	border-radius: 20px;
-	outline: auto;
-	font-size: 16px;
-
+  border: 0;
+  background-color: var(--color-5);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 16px;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .search-bar button {
-	background-color: var(--color-1);
-	color: #fff;
-	border: none;
-	padding: 8px 10px;
-	margin-left: 10px;
-	cursor: pointer;
+  background-color: var(--color-1);
+  color: var(--color-4);
+  border: none;
+  padding: 8px 10px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .search-bar button:hover {
-	background-color: var(--color-5);
+  background-color: var(--color-5);
 }
 
-.user-profile {
-	display: flex;
-	align-items: center;
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  padding-right: 20px;
 }
 
-.user-profile img {
-	height: 60px;
-	border-radius: 50%;
-	margin-right: 10px;
+.profile {
+  padding-right: 80px;
 }
 
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+.profile img {
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-nav li {
-	margin: 0;
-	padding: 0;
+span {
+  display: flex;
+  font-weight: bolder;
+  color: white;
 }
 
-nav a {
-	display: block;
-	padding: 20px;
-	color: #333;
-	text-decoration: none;
+.links {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
 }
 
-nav a:hover {
-	background-color: #eee;
+.links a {
+  text-decoration: none;
+  gap: 3rem;
+  background-color: var(--color-5);
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
 }
 
-.user-info {
-	display: flex;
-	flex-direction: column;
+.links a:hover {
+  background-color: var(--color-1);
 }
+
+/*Fim Cabeçalho***********************************************************************************************/
+
+/*main********************************************************************************************************/
+/* CSS ajustável para o HTML fornecido */
+/* Definir a largura máxima do conteúdo */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Definir a largura dos elementos principais */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 70%;
+}
+
+/* Definir o estilo do box */
+.box {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+/* Estilo de anúncios */
+.advertisements {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 28%;
+}
+
+/* Estilo de tendências */
+.trendings {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 28%;
+  margin-top: 20px;
+}
+
+/* Estilo de cabeçalho */
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
