@@ -31,7 +31,7 @@ body {
 	overflow-y: auto;
 	background-color: var(--color-1);
 	color: var(--color-4);
-	height: 300%;
+	height: 300vmax;
 	width: 10px;
 	transition: width 0.5s;
 }
@@ -175,8 +175,8 @@ span {
 /*Fim Cabeçalho***********************************************************************************************/
 
 /*main********************************************************************************************************/
-/* CSS ajustável para o HTML fornecido */
-/* Definir a largura máxima do conteúdo */
+
+/*começo main*/
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -186,16 +186,17 @@ main {
   align-items: stretch;
 }
 
-/* Definir a largura dos elementos principais */
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-areas:
+      "box1 box2 box3 announcements"
+      "box4 box5 box6 trending";
+  align-items: center;
+  width: 80%;
 }
 
-/* Definir o estilo do box */
 .box {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
@@ -204,25 +205,47 @@ main {
   margin-bottom: 20px;
 }
 
-/* Estilo de anúncios */
-.advertisements {
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+
+
+
+.announcement {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
   padding: 20px;
-  width: 28%;
+  width: 10em;
+  grid-area: announcements;
 }
 
-/* Estilo de tendências */
+
 .trendings {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
   padding: 20px;
-  width: 28%;
+  width: 10em;
   margin-top: 20px;
+  grid-area: trending;
 }
 
-/* Estilo de cabeçalho */
-h2 {
+
+h3 {
   margin-top: 0;
   margin-bottom: 10px;
 }
