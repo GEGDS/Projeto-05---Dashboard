@@ -7,11 +7,7 @@
     --color-4: #E8EAF6;
     --color-5: #9FA8DA;
 
-	--avatar: url("https://github.com/gegds.png");
-    --avatar2: url("https://github.com/gegds.png");
-    --avatar3: url("https://github.com/ppsavila.png");
-    --avatar4: url("https://github.com/MatheusPinheirodeSouza1.png");
-
+	  --avatar: url("https://github.com/gegds.png");
 }
 
 
@@ -29,9 +25,10 @@ body {
 .sidebar {
 	position: absolute;
 	overflow-y: auto;
+  overflow-x: hidden;
 	background-color: var(--color-1);
 	color: var(--color-4);
-	height: 300vmax;
+	height: 100vmax;
 	width: 10px;
 	transition: width 0.5s;
 }
@@ -188,21 +185,53 @@ main {
 
 .boxes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr ;
   grid-template-areas:
       "box1 box2 box3 announcements"
-      "box4 box5 box6 trending";
+      "box4 box5 box6 trending";   
   align-items: center;
   width: 80%;
+  padding-top: 20px;
 }
 
 .box {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
+  background-color: var(--color-2);
+  border: 1px solid var(--color-5);
   padding: 20px;
-  width: 48%;
+  width: 200px;
   margin-bottom: 20px;
+}
+
+/*A media query está definida para uma largura máxima de 800px. Quando a tela tiver essa largura ou menor, as propriedades dentro dessa media query serão aplicadas, fazendo com que o layout mude para 1 coluna e 6 linhas. Note que o repeat(6, 1fr) é uma abreviação para definir seis linhas com o mesmo tamanho.*/
+@media (max-width: 800px) {
+  .boxes, aside{
+    padding-left: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "announcements"
+        "trending";
+  }
+}
+
+.box-icons img{
+  overflow: hidden;
+  padding-right: 5px;
+  height: 40px;
+  width: 40px;
+  transition: transform 1s ease;
+}
+
+.box-icons img:hover {
+  box-shadow: 0 2px 5px var(--color-5);
+  cursor: pointer;
 }
 
 .box1 {
@@ -224,29 +253,79 @@ main {
   grid-area: box6;
 }
 
-
+aside  {
+  padding-top: 20px;
+}
 
 .announcement {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
+  background-color: var(--color-2);
+  border: 1px solid var(--color-5);
   padding: 20px;
   width: 10em;
   grid-area: announcements;
 }
 
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--color-4);
+}
+
 
 .trendings {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
+  background-color: var(--color-2);
+  border: 1px solid var(--color-5);
   padding: 20px;
   width: 10em;
+  height: 16em;
   margin-top: 20px;
   grid-area: trending;
 }
 
-
-h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+.trendings ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+.trendings li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+}
+
+.trendings li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.trendings .profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trendings .profile-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--color-5);
+}
+
+.trendings .profile-description {
+  font-size: 0.8em;
+  color: black;
+  margin-top: 5px;
+}
+
+.trendings li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.trendings .profile-name:hover {
+  color: var(--color-4);
+  text-decoration: underline;
+}
